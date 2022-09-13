@@ -1,6 +1,8 @@
 #This is basicaly snake but with enemies added
 #I made this using Visual Studio Code
 #Also if you couldn't tell already, it's Python
+#Updates:
+#1. Added code to make the food unable to spawn on the enemy
 
 import turtle
 import time
@@ -124,7 +126,7 @@ while True:
 
         for segment in enemys:
             segment.goto(1000, 1000)
-            
+
         #Clear the segments list
         segments.clear()
         enemys.clear()
@@ -150,7 +152,7 @@ while True:
 
         for segment in enemys:
             segment.goto(1000, 1000)
-            
+
         #Clear the segments list
         segments.clear()
         enemys.clear()
@@ -168,7 +170,12 @@ while True:
         #Move the food to random spot on screen
         x = random.randint(-290,290)
         y = random.randint(-290, 290)
+        if x == food.xcor() and y == food.ycor():
+            while x == food.xcor() and y == food.ycor():
+                x = random.randint(-290,290)
+                y = random.randint(-290, 290)
         food.goto(x, y)
+
 
         #Add a segment
         new_segment = turtle.Turtle()
@@ -229,7 +236,7 @@ while True:
 
             for segment in enemys:
                 segment.goto(1000, 1000)
-            
+
             #Clear the segments list
             segments.clear()
             enemys.clear()
