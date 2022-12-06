@@ -1,0 +1,28 @@
+# Imports
+import random
+import time
+
+# Set variable
+numbers_printed = 0
+
+# Main loop
+while numbers_printed < 10:
+
+# Set variables
+    odd_or_even = "N/A"
+    counter = 0
+    number = random.randint(0,100)
+    while counter < number:
+        counter += 2
+        
+    # Check number
+    if counter > number:
+       odd_or_even = "odd"
+    if number == counter:
+       odd_or_even = "even"
+       
+    # Print it out
+    number_helper = str(number)
+    print(number_helper + " is an " + odd_or_even + " number!")
+    numbers_printed += 1
+    time.sleep(0.1)
