@@ -4,9 +4,11 @@ class HelloWorld {
     Random random = new Random();
     int number = random.Next(101);
     int guess = 1000;
+    int guesses = 0;
     while (guess != number) {
         Console.WriteLine("Guess a number between 0 and 100");
         guess = Convert.ToInt32(Console.ReadLine());
+        guesses += 1;
         if (guess > number) {
             Console.WriteLine("Lower");
         }
@@ -14,6 +16,6 @@ class HelloWorld {
             Console.WriteLine("Higher");
         }
     }
-    Console.WriteLine("You win!");
+    Console.WriteLine($"You won the game in only {guesses} guesses!");
   }
 }
