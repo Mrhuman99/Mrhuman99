@@ -1,0 +1,69 @@
+using System;
+class HelloWorld {
+  static void Main() {
+    // Initialize the variables
+    string operation = "";
+    int numberOfNumbers;
+    double total = 0;
+    
+    // Main loop
+    while (operation != "+" && operation != "-" && operation != "*" && operation != "/") {
+     Console.WriteLine("Welcome to the calculator. What operation would you like to run? (+, -, *, /)");
+     operation = Console.ReadLine();
+     if (operation == "+") {
+         Console.WriteLine("How many numbers shall be in this calculation?");
+         numberOfNumbers = Convert.ToInt32(Console.ReadLine());
+         for (int i = 0; i < numberOfNumbers; i++) {
+             int j = i + 1;
+             Console.WriteLine($"Number #{j}");
+             total += Convert.ToDouble(Console.ReadLine());
+         }
+     }
+     
+     if (operation == "-") {
+         Console.WriteLine("How many numbers shall be in this calculation?");
+         numberOfNumbers = Convert.ToInt32(Console.ReadLine());
+         for (int i = 0; i < numberOfNumbers; i++) {
+             int j = i + 1;
+             Console.WriteLine($"Number #{j}");
+             if (i == 0) {
+                 total = Convert.ToDouble(Console.ReadLine());
+             } else {
+                 total -= Convert.ToDouble(Console.ReadLine());
+             }
+         }
+     }
+     
+     if (operation == "*") {
+         Console.WriteLine("How many numbers shall be in this calculation?");
+         numberOfNumbers = Convert.ToInt32(Console.ReadLine());
+         for (int i = 0; i < numberOfNumbers; i++) {
+             int j = i + 1;
+             Console.WriteLine($"Number #{j}");
+             if (i == 0) {
+                 total = Convert.ToDouble(Console.ReadLine());
+             } else {
+                 total *= Convert.ToDouble(Console.ReadLine());
+             }
+         }
+     }
+     
+     if (operation == "/") {
+         Console.WriteLine("How many numbers shall be in this calculation?");
+         numberOfNumbers = Convert.ToInt32(Console.ReadLine());
+         for (int i = 0; i < numberOfNumbers; i++) {
+             int j = i + 1;
+             Console.WriteLine($"Number #{j}");
+             if (i == 0) {
+                 total = Convert.ToDouble(Console.ReadLine());
+             } else {
+                 total /= Convert.ToDouble(Console.ReadLine());
+             }
+         }
+     }
+     
+     Console.WriteLine($"The answer is {total}");
+    }
+  }
+}
+// 69 :D
