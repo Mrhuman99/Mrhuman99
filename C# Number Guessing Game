@@ -1,0 +1,19 @@
+using System;
+class HelloWorld {
+  static void Main() {
+    Random random = new Random();
+    int number = random.Next(101);
+    int guess = 1000;
+    while (guess != number) {
+        Console.WriteLine("Guess a number between 0 and 100");
+        guess = Convert.ToInt32(Console.ReadLine());
+        if (guess > number) {
+            Console.WriteLine("Lower");
+        }
+        if (guess < number) {
+            Console.WriteLine("Higher");
+        }
+    }
+    Console.WriteLine("You win!");
+  }
+}
